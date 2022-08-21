@@ -82,3 +82,50 @@ body{
 #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
   }
+
+.suggestions{
+    font-family: 'Open Sans', sans-serif;
+    margin: 20px;
+    top: 35%;
+    position: absolute;
+    background: rgba(85, 85, 85, 0.333);
+    box-shadow: 0px 25px 80px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 25px;
+    padding-top: 0;
+    color: #555;
+    transition: 0.5s ease-in-out;
+}
+
+.movies{
+    color: rgb(204, 0, 255);
+}
+
+@media  only screen and (max-width : 768px) {
+    .suggestions {
+        font-family: 'Open Sans', sans-serif;
+        margin: 5px;
+        top: 35%;
+        position: absolute;
+        background: rgba(85, 85, 85, 0.333);
+        box-shadow: 0px 25px 80px rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+        padding: 25px;
+        padding-top: 0;
+        color: #555;
+        transform: scale(0.5);
+        left: -60px;
+        transition: 0.5s ease-in-out;
+    }
+}
+
+.suggestions:hover{
+    background: rgb(85, 85, 85);
+    transition: 0.5s ease-in-out;
+    color: rgb(217, 217, 217);
+}
+
+.movies:hover{
+    color: orange;
+    transform: scale(1.2);
+}
