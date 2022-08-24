@@ -5,15 +5,17 @@ const api_key = "k_jxlirbs9"
 
 function searchMedia(event){
 
-    event.preventDefault();
+  event.preventDefault();
 
-    const form = new FormData(this);
-    const query = form.get("search");
+  const form = new FormData(this);
+  const query = form.get("search");
 
-    fetch(`${base_url}${query}`)
-    .then(res=>res.json())
-    .then(updateDom)
-    .catch(err=>console.warn(err.message));
+  fetch(`${base_url}${query}`)
+  .then(res=>res.json())
+  .then(updateDom)
+  .catch(err=>console.warn(err.message));
+
+
 }
 
 function updateDom(data){
@@ -67,5 +69,24 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+//loader JS
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+
+  loader.classList.add("loader--hidden");
+
+  loader.addEventListener("transitionend", () => {
+    if (document.querySelector(".loader")) {
+      document.body.removeChild(loader)
+    }
+  });
+});
+
+document.addEventListener
+
+const loader2 = document.querySelector(".loader2");
+
+loader2.classList.toggle("loader--hidden2");
 
 window.addEventListener("load", pageLoaded)
